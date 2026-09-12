@@ -8,6 +8,7 @@
 - Everything is **self-hosted on a single machine via Docker Compose**.
 - **UI in Spanish, codebase in English** (identifiers, DB columns, API fields, logs, comments, commits, docs).
 - Three currencies (`ARS`, `UYU`, `USD`) with daily FX history from `2025-01-01`.
+- **Field capture must cost the worker almost nothing** — they're there to build, not to do bookkeeping. See `agents.md` §3: no mobile capture change ships that adds a field, tap, or blocking call without weighing it against this.
 
 ---
 

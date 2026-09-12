@@ -9,7 +9,7 @@
 
 ## 1. Product in one paragraph
 
-A multi-project CRM for a company that buys vacant lots and builds houses from scratch. Field users load every peso/dollar that moves on a construction site from their phone — by typing, by photographing a ticket, or by speaking. Project managers get a web console with a consolidated portfolio view plus deep per-project drill-downs. A master user administers everything. The whole operation runs across three currencies (ARS, UYU, USD) with automatic daily FX rates so that "how much did this house actually cost" always has a defensible answer.
+A multi-project CRM for a company that buys vacant lots and builds houses from scratch. Field users load every peso/dollar that moves on a construction site from their phone — by typing, by photographing a ticket, or by speaking. Their job is building, not bookkeeping: the app must ask for as little of their time and attention as possible, so capture is designed to cost seconds, not minutes. Project managers get a web console with a consolidated portfolio view plus deep per-project drill-downs. A master user administers everything. The whole operation runs across three currencies (ARS, UYU, USD) with automatic daily FX rates so that "how much did this house actually cost" always has a defensible answer.
 
 ---
 
@@ -25,6 +25,7 @@ A multi-project CRM for a company that buys vacant lots and builds houses from s
 
 - **Field user ("Cargador de obra")**
   - Foreman, site administrator, or the owner's right hand.
+  - Their job is building the house, not logging expenses — every minute spent on data entry is a minute not spent on the site. Design for this persona always trades UI simplicity for the field user's time, even at the cost of extra work elsewhere in the system.
   - On a construction site: dust, gloves, bad light, intermittent 4G, one hand free.
   - Not an accountant. Should never be asked to pick an accounting code.
   - Success = "I loaded a ticket in under 20 seconds without typing."
@@ -66,7 +67,7 @@ A multi-project CRM for a company that buys vacant lots and builds houses from s
 
 ## 3. Product principles
 
-- **Capture is sacred.** If loading an expense is slow or fails, the whole product is worthless. Optimize the mobile flow above everything else.
+- **The worker builds; the product does the bookkeeping.** A field user is on site to build, not to do data entry — every second spent loading an expense is a second stolen from the build. Capture must cost the least possible time, taps, and attention: minimize required fields, default everything that can be defaulted, and never add a step, confirmation, or validation rule to the capture flow without weighing it against this rule first. If loading an expense is slow, fiddly, or fails, the whole product is worthless — optimize the mobile flow above everything else.
 - **Never block the user on AI.** OCR and audio transcription *pre-fill*, they don't decide. The user always sees an editable form before saving.
 - **Offline is the default assumption, not an edge case.** The app works with zero connectivity and syncs 1–2× a day.
 - **Money is never stored converted.** We store what was actually spent, in the currency it was spent, and convert only at display/report time. See §6.
